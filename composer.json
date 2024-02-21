@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/open_cart3_loc",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "dev",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
