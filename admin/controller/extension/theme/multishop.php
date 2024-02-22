@@ -1,9 +1,9 @@
 <?php
-class ControllerExtensionThemeAntropy extends Controller {
+class ControllerExtensionThemeMultishop extends Controller {
 	private $error = array();
 
 	public function index() {
-		$this->load->language('extension/theme/antropy');
+		$this->load->language('extension/theme/multishop');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -109,10 +109,10 @@ class ControllerExtensionThemeAntropy extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('extension/theme/antropy', 'user_token=' . $this->session->data['user_token'] . '&store_id=' . $this->request->get['store_id'], true)
+			'href' => $this->url->link('extension/theme/multishop', 'user_token=' . $this->session->data['user_token'] . '&store_id=' . $this->request->get['store_id'], true)
 		);
 
-		$data['action'] = $this->url->link('extension/theme/antropy', 'user_token=' . $this->session->data['user_token'] . '&store_id=' . $this->request->get['store_id'], true);
+		$data['action'] = $this->url->link('extension/theme/multishop', 'user_token=' . $this->session->data['user_token'] . '&store_id=' . $this->request->get['store_id'], true);
 
 		$data['cancel'] = $this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=theme', true);
 
@@ -125,7 +125,7 @@ class ControllerExtensionThemeAntropy extends Controller {
 		} elseif (isset($setting_info['theme_antropy_directory'])) {
 			$data['theme_antropy_directory'] = $setting_info['theme_antropy_directory'];
 		} else {
-			$data['theme_antropy_directory'] = 'antropy';
+			$data['theme_antropy_directory'] = 'multishop';
 		}		
 
 		$data['directories'] = array();
@@ -324,11 +324,11 @@ class ControllerExtensionThemeAntropy extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('extension/theme/antropy', $data));
+		$this->response->setOutput($this->load->view('extension/theme/multishop', $data));
 	}
 
 	protected function validate() {
-		if (!$this->user->hasPermission('modify', 'extension/theme/antropy')) {
+		if (!$this->user->hasPermission('modify', 'extension/theme/multishop')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
