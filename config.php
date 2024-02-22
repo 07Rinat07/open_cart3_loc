@@ -9,7 +9,7 @@ define('HTTPS_SERVER', 'http://localhost/open_cart3_loc/');
 define('DIR_APPLICATION', '/var/www/html/open_cart3_loc/catalog/');
 define('DIR_SYSTEM', '/var/www/html/open_cart3_loc/system/');
 define('DIR_IMAGE', '/var/www/html/open_cart3_loc/image/');
-define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
+define('DIR_STORAGE', '/var/www/storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/theme/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
